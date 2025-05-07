@@ -15,9 +15,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Sorte</Text>
-      <TouchableOpacity onPress={() => {setDado(Math.floor(Math.random() * 6) + 1);}}>
-        <Image source={imagens[dado]}/>
+      <Text style={styles.texto}>Sorte</Text>
+      <TouchableOpacity onPress={() => {setDado(Math.floor(Math.random() * 6));}}>
+        <Image style={styles.imagem} source={imagens[dado]}/>
       </TouchableOpacity>
     </View>
   );
@@ -26,8 +26,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#443333',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  imagem: {
+    width: 300,
+    height: 300,
+  },
+  texto: {
+    color: "#fff",
+    fontWeight: "bold",
+    fontSize: 32,
+    paddingBottom: 10,
+  }
 });
